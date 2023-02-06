@@ -1,4 +1,7 @@
 class EmployersController < ApplicationController
+  before_action :set_employer, only: [:show, :update, :destroy]
+  # skip_before_action :authorize, only: [:index, :show]
+
   def index
     render json Employer.all
   end
@@ -23,6 +26,10 @@ class EmployersController < ApplicationController
   end
 
   private
+
+  def set_employer
+    @employer = Employer.find(params[:id])
+  end
 
   def employer_params
     params.permit(:name, :location, :role, :time_employed, :desc_1, :desc_2, :desc_3, :desc_4, :desc_5)
