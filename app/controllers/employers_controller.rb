@@ -11,7 +11,8 @@ class EmployersController < ApplicationController
   end
 
   def create
-    employer = Employer.create!(employer_params)
+    user = User.first
+    employer = user.employers.create!(employer_params)
     render json: employer, status: :created
   end
 

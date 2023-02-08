@@ -3,4 +3,23 @@ const nextConfig = {
   reactStrictMode: true,
 }
 
-module.exports = nextConfig
+module.exports = {
+  async rewrites() {
+    return [
+      {
+        source: '/api/:path*',
+        destination: 'http://localhost:3000/:path*'
+      }
+    ]
+  },
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'tailwindui.com',
+        port: '',
+        pathname: '/img/logos/**',
+      },
+    ]
+  }
+}
