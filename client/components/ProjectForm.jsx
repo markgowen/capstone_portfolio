@@ -1,8 +1,38 @@
+import { useState } from 'react';
 
 export default function EmployerForm() {
+    const [formValues, setFormValues] = useState({
+        name: '',
+        desc: '',
+        framework_1: '',
+        link: '',
+    });
 
+    const handleChange = (e) => {
+        setFormValues({ ...formValues, [e.target.name]: e.target.value });
+    };
+
+    const handleSubmit = (e) => {
+        e.preventDefault();
+        fetch('/api/projects', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(formValues)
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                setFormValues({
+                    name: '',
+                    desc: '',
+                    framework_1: '',
+                    link: '',
+                });
+            })
+    };
     return (
-        <form className="space-y-8 divide-y divide-gray-200">
+        <form onSubmit={handleSubmit} className="space-y-8 divide-y divide-gray-200">
             <div className="space-y-8 divide-y divide-gray-200">
                 <div>
                     <div>
@@ -25,8 +55,10 @@ export default function EmployerForm() {
                             <div className="mt-1">
                                 <input
                                     type="text"
-                                    name="text"
+                                    name="name"
                                     id="name"
+                                    value={formValues.name}
+                                    onChange={handleChange}
                                     autoComplete="text"
                                     className="block w-full rounded-none border-gray-300 shadow-sm focus:border-ring-lime focus:ring-lime sm:text-sm"
                                 />
@@ -39,9 +71,11 @@ export default function EmployerForm() {
                             </label>
                             <div className="mt-1">
                                 <input
-                                    id="role"
-                                    name="text"
+                                    id="desc"
+                                    name="desc"
                                     type="text"
+                                    value={formValues.desc}
+                                    onChange={handleChange}
                                     autoComplete="text"
                                     className="block w-full rounded-none border-gray-300 shadow-sm focus:border-lime focus:ring-lime sm:text-sm"
                                 />
@@ -54,9 +88,11 @@ export default function EmployerForm() {
                             </label>
                             <div className="mt-1">
                                 <input
-                                    id="role"
-                                    name="text"
+                                    id="framework_1"
+                                    name="framework_1"
                                     type="text"
+                                    value={formValues.framework_1}
+                                    onChange={handleChange}
                                     autoComplete="text"
                                     className="block w-full rounded-none border-gray-300 shadow-sm focus:border-lime focus:ring-lime sm:text-sm"
                                 />
@@ -64,14 +100,16 @@ export default function EmployerForm() {
                         </div>
 
                         <div className="sm:col-span-2">
-                            <label htmlFor="street-address" className="block text-sm font-medium text-aqua">
+                            <label htmlFor="text" className="block text-sm font-medium text-aqua">
                                 Link
                             </label>
                             <div className="mt-1">
                                 <input
                                     type="text"
-                                    name="street-address"
-                                    id="street-address"
+                                    name="link"
+                                    id="link"
+                                    value={formValues.link}
+                                    onChange={handleChange}
                                     autoComplete="street-address"
                                     className="block w-full rounded-none border-gray-300 shadow-sm focus:border-ring-lime focus:ring-lime sm:text-sm"
                                 />

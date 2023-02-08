@@ -9,7 +9,6 @@ import {
     Bars3Icon,
     FolderIcon,
     UsersIcon,
-    UserIcon,
     XMarkIcon,
 } from '@heroicons/react/24/outline'
 import Link from 'next/link'
@@ -38,7 +37,7 @@ export default function Dashboard() {
                 return { ...i, current: false }
             }
         }))
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [router.asPath])
 
     const handleLogOut = (e) => {
