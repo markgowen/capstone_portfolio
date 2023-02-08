@@ -12006,3 +12006,11 @@ Processing by UsersController#show as */*
 Completed 200 OK in 4ms (Views: 1.1ms | ActiveRecord: 0.3ms | Allocations: 818)
 
 
+Started GET "/me" for ::1 at 2023-02-08 13:52:16 -0800
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 15ms (Views: 0.3ms | ActiveRecord: 8.4ms | Allocations: 3800)
+
+
