@@ -1,5 +1,36 @@
+import { useState, useContext } from 'react'
+import { useRouter } from 'next/router'
+import UserContext from '../contexts/userContext'
 
-export default function Example() {
+export default function Login() {
+    const [_user, setUser] = useContext(UserContext)
+    const [_errors, setErrors] = useState([])
+    const [form, setForm] = useState({
+        username: '',
+        password: '',
+    })
+    const router = useRouter()
+
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        fetch('/api/login', {
+            method: 'POST',
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(form),
+        }).then(res => {
+            if (res.ok) {
+                res.json().then((user) => setUser(user)).then(router.push('/dashboard'))
+            } else {
+                res.json().then((error) => setErrors(error.errors))
+            }
+        })
+    }
+    const handleChange = (e) => {
+        setForm({ ...form, [e.target.name]: e.target.value })
+    }
+
     return (
         <>
             <div className="flex min-h-full flex-col justify-center py-12 sm:px-6 lg:px-8">
@@ -9,18 +40,20 @@ export default function Example() {
 
                 <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
                     <div className="bg-steel py-8 px-4 shadow sm:rounded-none sm:px-10">
-                        <form className="space-y-6" action="#" method="POST">
+                        <form onSubmit={handleSubmit} className="space-y-6" action="#" method="POST">
                             <div>
-                                <label htmlFor="email" className="block text-sm font-medium text-aqua">
+                                <label htmlFor="text" className="block text-sm font-medium text-aqua">
                                     Email address
                                 </label>
                                 <div className="mt-1">
                                     <input
-                                        id="email"
-                                        name="email"
-                                        type="email"
-                                        autoComplete="email"
+                                        id="username"
+                                        name="username"
+                                        type="text"
+                                        autoComplete="text"
                                         required
+                                        value={form.username}
+                                        onChange={handleChange}
                                         className="block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                     />
                                 </div>
@@ -37,6 +70,8 @@ export default function Example() {
                                         type="password"
                                         autoComplete="current-password"
                                         required
+                                        value={form.password}
+                                        onChange={handleChange}
                                         className="block w-full appearance-none rounded-none border border-gray-300 px-3 py-2 placeholder-gray-400 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                                     />
                                 </div>
