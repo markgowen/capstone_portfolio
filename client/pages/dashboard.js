@@ -1,6 +1,8 @@
-import { Fragment, useState, useEffect } from 'react'
+/* eslint-disable @next/next/no-img-element */
+import { Fragment, useState, useEffect, useContext } from 'react'
 import { useRouter } from 'next/router'
 import { Dialog, Transition } from '@headlessui/react'
+import UserContext from '../contexts/userContext'
 import EmployerForm from '../components/EmployerForm'
 import ProjectForm from '../components/ProjectForm'
 import {
@@ -19,12 +21,14 @@ function classNames(...classes) {
 
 export default function Dashboard() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [_user, setUser] = useContext(UserContext)
     const [navigation, setNavigation] = useState([
         { name: 'Employers', href: '#employers', icon: UsersIcon, current: false, component: <EmployerForm /> },
         { name: 'Projects', href: '#projects', icon: FolderIcon, current: false, component: <ProjectForm /> },
     ])
 
     const router = useRouter()
+
     useEffect(() => {
         setNavigation(navigation.map((i) => {
             console.log(i.href, router.asPath)
@@ -34,7 +38,16 @@ export default function Dashboard() {
                 return { ...i, current: false }
             }
         }))
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [router.asPath])
+
+    const handleLogOut = (e) => {
+        fetch(`/api/logout`, {
+            method: 'DELETE'
+        }).then(() => {
+            setUser(null)
+        }).then(router.push('/'))
+    }
 
     return (
         <>
@@ -170,7 +183,7 @@ export default function Dashboard() {
                             </nav>
                         </div>
                         <div className="flex flex-shrink-0 bg-aqua p-4">
-                            <a href="#" className="group block w-full flex-shrink-0">
+                            <Link onClick={handleLogOut} href="/" className="group block w-full flex-shrink-0">
                                 <div className="flex items-center">
                                     <div>
                                         <svg
@@ -184,7 +197,7 @@ export default function Dashboard() {
                                         <p className="text-xs font-medium text-midnight-100 group-hover:text-gray-200">Sign out</p>
                                     </div>
                                 </div>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>

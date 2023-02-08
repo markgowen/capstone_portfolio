@@ -1,8 +1,8 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show]
+  # before_action :set_user, only: [:show]
 
   def show
-    render json: user
+    render json: @current_user
   end
 
   private

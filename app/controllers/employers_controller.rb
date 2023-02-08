@@ -11,7 +11,7 @@ class EmployersController < ApplicationController
   end
 
   def create
-    user = User.first
+    user = User.find(session[:user_id])
     employer = user.employers.create!(employer_params)
     render json: employer, status: :created
   end
