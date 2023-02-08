@@ -54,11 +54,11 @@ export default function Example() {
                     </div>
                     <div className="mt-8 lg:mt-0">
                         <div className="mx-auto max-w-prose text-base lg:max-w-none">
-                            <p className="text-lg text-gray-500">
+                            <p className="text-lg text-silver">
                                 Hello! My name is Mark, and I am a passionate and creative web developer. My journey in the tech world began in 2012 when I took my first web development course at a community college. It was there where I discovered my love for coding and my interest in building beautiful and user-friendly web applications.
                             </p>
                         </div>
-                        <div className="prose prose-indigo mx-auto mt-5 text-gray-500 lg:col-start-1 lg:row-start-1 lg:max-w-none">
+                        <div className="prose prose-indigo mx-auto mt-5 text-silver lg:col-start-1 lg:row-start-1 lg:max-w-none">
                             <p>
                                 I have always had a passion for creating things, whether it be with my camera, my hands or crafting web applications. This led me to further my education and skills by attending <Link href="https://flatironschool.com/" rel="noopener noreferrer" target="_blank" className='text-aqua not-italic no-underline'>Flatiron School</Link> where I graduated as a full-stack web developer.
                             </p>
