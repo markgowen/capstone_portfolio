@@ -98,3 +98,520 @@ Migrating to AddPasswordDigestToUser (20230206225634)
   [1m[36mEmployer Create (0.7ms)[0m  [1m[32mINSERT INTO "employers" ("user_id", "name", "location", "role", "time_employed", "desc_1", "desc_2", "desc_3", "desc_4", "desc_5", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["user_id", 4], ["name", "Employer 1"], ["location", "Location 1"], ["role", "Role 1"], ["time_employed", "Time Employed 1"], ["desc_1", "Description 1"], ["desc_2", "Description 2"], ["desc_3", "Description 3"], ["desc_4", "Description 4"], ["desc_5", "Description 5"], ["created_at", "2023-02-06 23:05:16.008571"], ["updated_at", "2023-02-06 23:05:16.008571"]]
   [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mCOMMIT[0m
   [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+Started POST "/api/employers" for ::1 at 2023-02-08 10:31:06 -0800
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/api/employers"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:32:48 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:32:53 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:32:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:03 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:09 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:34 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:44 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:50 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:33:56 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:01 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:08 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:18 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:25 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:26 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:32 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:33 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:33 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:40 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:41 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:42 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:43 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:46 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:47 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:51 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:53 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:34:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:00 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:01 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:02 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:02 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:06 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:08 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:08 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:10 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:12 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:14 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:17 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:19 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:21 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:25 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:25 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:27 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:28 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:31 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:34 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:35 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:35 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:40 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:41 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:41 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:43 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:43 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:46 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:48 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:48 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:49 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:50 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:52 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:53 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:54 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:56 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:58 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:35:59 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:00 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:00 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:02 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:03 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:04 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:07 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:08 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:09 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:11 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:12 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:13 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:15 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:17 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:20 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:20 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:20 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:21 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:22 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:23 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:24 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:27 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:28 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:29 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:30 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:32 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:32 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:34 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:35 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:35 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/dashboard" for ::1 at 2023-02-08 10:36:36 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:37 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:37 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:38 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/_next/webpack-hmr" for ::1 at 2023-02-08 10:36:39 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/_next/webpack-hmr"):
+  
+Started GET "/dashboard" for ::1 at 2023-02-08 11:03:13 -0800
+  
+ActionController::RoutingError (No route matches [GET] "/dashboard"):
+  
+Started GET "/" for ::1 at 2023-02-08 11:07:11 -0800
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/markgowen/.rbenv/versions/2.7.7/lib/ruby/gems/2.7.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/markgowen/.rbenv/versions/2.7.7/lib/ruby/gems/2.7.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.8ms | Allocations: 460)
+Completed 200 OK in 6ms (Views: 1.4ms | Allocations: 3910)
+
+
+Started POST "/employers" for ::1 at 2023-02-08 11:40:49 -0800
+Processing by EmployersController#create as */*
+  Parameters: {"name"=>"Mark Gowen, LLC", "role"=>"Photographer", "location"=>"Eugene, OR", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget", "employer"=>{"name"=>"Mark Gowen, LLC", "location"=>"Eugene, OR", "role"=>"Photographer", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget"}}
+[31mUnpermitted parameter: :employer. Context: { controller: EmployersController, action: create, request: #<ActionDispatch::Request:0x0000000155d88500>, params: {"name"=>"Mark Gowen, LLC", "role"=>"Photographer", "location"=>"Eugene, OR", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget", "controller"=>"employers", "action"=>"create", "employer"=>{"name"=>"Mark Gowen, LLC", "location"=>"Eugene, OR", "role"=>"Photographer", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Completed 422 Unprocessable Entity in 17ms (Views: 1.6ms | ActiveRecord: 11.5ms | Allocations: 26254)
+
+
+Started POST "/employers" for ::1 at 2023-02-08 11:43:51 -0800
+Processing by EmployersController#create as */*
+  Parameters: {"name"=>"Mark Gowen, LLC", "role"=>"Photographer", "location"=>"Eugene, OR", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget", "employer"=>{"name"=>"Mark Gowen, LLC", "location"=>"Eugene, OR", "role"=>"Photographer", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget"}}
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/employers_controller.rb:14:in `create'
+[31mUnpermitted parameter: :employer. Context: { controller: EmployersController, action: create, request: #<ActionDispatch::Request:0x0000000123a37388>, params: {"name"=>"Mark Gowen, LLC", "role"=>"Photographer", "location"=>"Eugene, OR", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget", "controller"=>"employers", "action"=>"create", "employer"=>{"name"=>"Mark Gowen, LLC", "location"=>"Eugene, OR", "role"=>"Photographer", "time_employed"=>"February 2018 - Present", "desc_1"=>"Specialized in Wedding and Portrait Photography", "desc_2"=>"Utilized Adobe Photoshop and Lightroom to edit images", "desc_3"=>"Managed business finances and budget"}} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/employers_controller.rb:15:in `create'
+  [1m[36mEmployer Create (1.3ms)[0m  [1m[32mINSERT INTO "employers" ("user_id", "name", "location", "role", "time_employed", "desc_1", "desc_2", "desc_3", "desc_4", "desc_5", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12) RETURNING "id"[0m  [["user_id", 4], ["name", "Mark Gowen, LLC"], ["location", "Eugene, OR"], ["role", "Photographer"], ["time_employed", "February 2018 - Present"], ["desc_1", "Specialized in Wedding and Portrait Photography"], ["desc_2", "Utilized Adobe Photoshop and Lightroom to edit images"], ["desc_3", "Managed business finances and budget"], ["desc_4", nil], ["desc_5", nil], ["created_at", "2023-02-08 19:43:52.076896"], ["updated_at", "2023-02-08 19:43:52.076896"]]
+  ↳ app/controllers/employers_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/employers_controller.rb:15:in `create'
+[active_model_serializers] Rendered EmployerSerializer with ActiveModelSerializers::Adapter::Attributes (0.99ms)
+Completed 201 Created in 46ms (Views: 11.8ms | ActiveRecord: 16.0ms | Allocations: 33345)
+
+
+  [1m[36mEmployer Load (1.5ms)[0m  [1m[34mSELECT "employers".* FROM "employers" ORDER BY "employers"."id" DESC LIMIT $1[0m  [["LIMIT", 1]]
