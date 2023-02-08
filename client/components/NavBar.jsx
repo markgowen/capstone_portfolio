@@ -14,7 +14,7 @@ export default function NavBar() {
                 });
             }
         });
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, []);
 
     return (
@@ -24,7 +24,7 @@ export default function NavBar() {
                 <li className="px-5 hover:text-silver"><Link href="/"><em className='text-salmon mr-2'>//</em>About</Link></li>
                 <li className="px-5 hover:text-silver"><Link href="/"><em className='text-salmon mr-2'>//</em>Work</Link></li>
                 <li className="px-5 hover:text-silver"><Link href="/"><em className='text-salmon mr-2'>//</em>Projects</Link></li>
-                <li className="px-5 hover:text-silver"><Link href="/"><em className='text-salmon mr-2'>//</em>Contact</Link></li>
+                <li className="px-5 hover:text-silver"><Link href="/contact"><em className='text-salmon mr-2'>//</em>Contact</Link></li>
                 {!user ? <button className="ml-5 px-5 py-1 border border-aqua rounded-none hover:text-silver hover:border-silver"><Link href="/login">Admin</Link> </button> : null}
             </ul>
         </div>
