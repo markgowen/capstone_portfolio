@@ -20,6 +20,12 @@ module.exports = {
         port: '',
         pathname: '/img/logos/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'www.github.com',
+        port: '',
+        pathname: '/markgowen/capstone_portfolio/**',
+      },
     ]
   }
 }
