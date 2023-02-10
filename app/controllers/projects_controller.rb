@@ -1,9 +1,9 @@
 class ProjectsController < ApplicationController
   before_action :set_project, only: [:show, :update, :destroy]
-#   skip_before_action :authorize, only: [:index, :show]
+  skip_before_action :authorize, only: [:index, :show]
 
   def index
-    render json Project.all
+    render json: Project.all
   end
 
   def show
