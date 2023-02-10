@@ -4,8 +4,9 @@ export default function EmployerForm() {
     const [formValues, setFormValues] = useState({
         name: '',
         desc: '',
-        framework_1: '',
-        link: '',
+        frameworks: '',
+        website: '',
+        github: '',
     });
 
     const handleChange = (e) => {
@@ -26,8 +27,9 @@ export default function EmployerForm() {
                 setFormValues({
                     name: '',
                     desc: '',
-                    framework_1: '',
-                    link: '',
+                    frameworks: '',
+                    website: '',
+                    github: '',
                 });
             })
     };
@@ -91,7 +93,7 @@ export default function EmployerForm() {
                                     id="framework_1"
                                     name="framework_1"
                                     type="text"
-                                    value={formValues.framework_1}
+                                    value={formValues.frameworks}
                                     onChange={handleChange}
                                     autoComplete="text"
                                     className="block w-full rounded-none border-gray-300 shadow-sm focus:border-lime focus:ring-lime sm:text-sm"
@@ -101,14 +103,30 @@ export default function EmployerForm() {
 
                         <div className="sm:col-span-2">
                             <label htmlFor="text" className="block text-sm font-medium text-aqua">
-                                Link
+                                Website
                             </label>
                             <div className="mt-1">
                                 <input
                                     type="text"
-                                    name="link"
-                                    id="link"
-                                    value={formValues.link}
+                                    name="website"
+                                    id="website"
+                                    value={formValues.website}
+                                    onChange={handleChange}
+                                    autoComplete="street-address"
+                                    className="block w-full rounded-none border-gray-300 shadow-sm focus:border-ring-lime focus:ring-lime sm:text-sm"
+                                />
+                            </div>
+                        </div>
+                        <div className="sm:col-span-2">
+                            <label htmlFor="text" className="block text-sm font-medium text-aqua">
+                                Github
+                            </label>
+                            <div className="mt-1">
+                                <input
+                                    type="text"
+                                    name="github"
+                                    id="github"
+                                    value={formValues.github}
                                     onChange={handleChange}
                                     autoComplete="street-address"
                                     className="block w-full rounded-none border-gray-300 shadow-sm focus:border-ring-lime focus:ring-lime sm:text-sm"

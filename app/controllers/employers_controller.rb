@@ -1,9 +1,9 @@
 class EmployersController < ApplicationController
   before_action :set_employer, only: [:show, :update, :destroy]
-  # skip_before_action :authorize, only: [:index, :show]
+  skip_before_action :authorize, only: [:index, :show]
 
   def index
-    render json Employer.all
+    render json: Employer.all
   end
 
   def show

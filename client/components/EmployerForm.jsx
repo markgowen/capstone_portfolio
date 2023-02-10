@@ -105,29 +105,14 @@ export default function EmployerForm() {
                             </div>
                         </div>
 
-                        <div className="sm:col-span-3">
-                            <label htmlFor="text" className="block text-sm font-medium text-aqua">
-                                City, State
-                            </label>
-                            <div className="mt-1">
-                                <input
-                                    type="text"
-                                    name="location"
-                                    id="location"
-                                    value={formValues.location}
-                                    onChange={handleChange}
-                                    className="block w-full rounded-none border-gray-300 shadow-sm focus:border-ring-lime focus:ring-lime sm:text-sm"
-                                />
-                            </div>
-                        </div>
 
-                        <div className="sm:col-span-6">
-                            <label htmlFor="text" className="block text-sm font-medium text-aqua">
+                        <div className="sm:col-span-3">
+                            <label htmlFor="textarea" className="block text-sm font-medium text-aqua">
                                 Job Description
                             </label>
                             <div className="mt-1">
-                                <input
-                                    type="text"
+                                <textarea
+                                    type="textarea"
                                     name="desc_1"
                                     value={formValues.desc_1}
                                     onChange={handleChange}
@@ -136,12 +121,12 @@ export default function EmployerForm() {
                             </div>
                         </div>
 
-                        <div className="sm:col-span-6">
+                        <div className="sm:col-span-3">
                             <label htmlFor="text" className="block text-sm font-medium text-aqua">
                                 Job Description
                             </label>
                             <div className="mt-1">
-                                <input
+                                <textarea
                                     type="text"
                                     name="desc_2"
                                     id="desc_2"
@@ -152,12 +137,12 @@ export default function EmployerForm() {
                             </div>
                         </div>
 
-                        <div className="sm:col-span-6">
+                        <div className="sm:col-span-3">
                             <label htmlFor="text" className="block text-sm font-medium text-aqua">
                                 Job Description
                             </label>
                             <div className="mt-1">
-                                <input
+                                <textarea
                                     type="text"
                                     name="desc_3"
                                     id="desc-3"

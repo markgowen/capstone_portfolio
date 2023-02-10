@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_02_06_225634) do
+ActiveRecord::Schema[7.0].define(version: 2023_02_10_223925) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -34,14 +34,11 @@ ActiveRecord::Schema[7.0].define(version: 2023_02_06_225634) do
     t.bigint "user_id", null: false
     t.string "name"
     t.string "desc"
-    t.string "framework_1"
-    t.string "framework_2"
-    t.string "framework_3"
-    t.string "framework_4"
-    t.string "framework_5"
-    t.string "link"
+    t.string "frameworks"
+    t.string "website"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "github"
     t.index ["user_id"], name: "index_projects_on_user_id"
   end
 

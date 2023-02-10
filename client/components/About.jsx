@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Example() {
     return (
-        <div className="overflow-hidden mt-48">
+        <div className="mx-auto overflow-hidden max-w-6xl mt-48">
             <div className="relative mx-auto max-w-7xl py-16 px-6 lg:px-8">
                 <div className="absolute top-0 bottom-0 left-3/4 hidden w-screen lg:block" />
                 <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
@@ -40,9 +40,9 @@ export default function Example() {
                         </svg>
                         <div className="relative mx-auto max-w-prose text-base lg:max-w-none">
                             <figure>
-                                <div className="aspect-w-12 aspect-h-7 lg:aspect-none">
+                                <div className="drop-shadow-xl aspect-w-12 aspect-h-7 lg:aspect-none">
                                     <Image
-                                        className="rounded-lg object-cover object-center shadow-lg"
+                                        className="rounded-none object-cover object-center"
                                         src={Portait}
                                         alt="Portrait of Mark Gowen"
                                         width={1184}
