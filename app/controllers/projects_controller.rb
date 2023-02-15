@@ -3,7 +3,7 @@ class ProjectsController < ApplicationController
   skip_before_action :authorize, only: [:index, :show]
 
   def index
-    render json: Project.all
+    render json: Project.all.order(created_at: :asc)
   end
 
   def show
@@ -11,7 +11,8 @@ class ProjectsController < ApplicationController
   end
 
   def create
-    project = Project.create!(project_params)
+    user = User.find(session[:user_id])
+    project = user.projects.create!(project_params)
     render json: project, status: :created
   end
 
@@ -32,6 +33,6 @@ class ProjectsController < ApplicationController
   end
 
   def project_params
-    params.permit(:name, :description, :framework_1, :framework_2, :framework_3, :framework_4, :framework_5, :link)
+    params.permit(:name, :desc, :frameworks, :website, :github)
   end
 end

@@ -6,7 +6,7 @@ import Link from 'next/link'
 
 export default function Example() {
     return (
-        <div className="mx-auto overflow-hidden max-w-6xl mt-48">
+        <div id="about" className="mx-auto overflow-hidden max-w-6xl mt-48">
             <div className="relative mx-auto max-w-7xl py-16 px-6 lg:px-8">
                 <div className="absolute top-0 bottom-0 left-3/4 hidden w-screen lg:block" />
                 <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
