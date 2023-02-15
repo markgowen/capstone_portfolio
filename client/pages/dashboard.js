@@ -27,11 +27,12 @@ export default function Dashboard() {
     ])
 
     const router = useRouter()
-
+    console.log(router)
     useEffect(() => {
         setNavigation(navigation.map((i) => {
             console.log(i.href, router.asPath)
-            if (`/dashboard${i.href}` == router.asPath) {
+            const length = i.href.length
+            if (`/dashboard${i.href}` == router.asPath.slice(0, 10 + length)) {
                 return { ...i, current: true }
             } else {
                 return { ...i, current: false }
@@ -52,7 +53,7 @@ export default function Dashboard() {
         <>
             <div>
                 <Transition.Root show={sidebarOpen} as={Fragment}>
-                    <Dialog as="div" className="relative z-40 md:hidden" onClose={setSidebarOpen}>
+                    <Dialog as="div" className="relative md:hidden" onClose={setSidebarOpen}>
                         <Transition.Child
                             as={Fragment}
                             enter="transition-opacity ease-linear duration-300"
@@ -65,7 +66,7 @@ export default function Dashboard() {
                             <div className="fixed inset-0 bg-gray-600 bg-opacity-75" />
                         </Transition.Child>
 
-                        <div className="fixed inset-0 z-40 flex">
+                        <div className="fixed inset-0 flex">
                             <Transition.Child
                                 as={Fragment}
                                 enter="transition ease-in-out duration-300 transform"
@@ -201,7 +202,7 @@ export default function Dashboard() {
                     </div>
                 </div>
                 <div className="flex flex-1 flex-col md:pl-64">
-                    <div className="sticky top-0 z-10 bg-gray-100 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
+                    <div className="sticky top-0 bg-gray-100 pl-1 pt-1 sm:pl-3 sm:pt-3 md:hidden">
                         <button
                             type="button"
                             className="-ml-0.5 -mt-0.5 inline-flex h-12 w-12 items-center justify-center rounded-md text-gray-500 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500"

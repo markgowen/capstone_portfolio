@@ -1,5 +1,7 @@
 import { useState } from 'react'
+import { useRef } from 'react'
 import { Switch } from '@headlessui/react'
+import emailjs from '@emailjs/browser';
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -7,6 +9,19 @@ function classNames(...classes) {
 
 export default function Example() {
   const [agreed, setAgreed] = useState(false)
+
+  const form = useRef()
+
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm('service_gkd0gin', 'template_bpb3nri', form.current, 'RWKLH_-geRNCyJTpz')
+      .then((result) => {
+        console.log(result.text);
+      }, (error) => {
+        console.log(error.text);
+      });
+  };
 
   return (
     <div className="overflow-hidden bg-midnight-200 py-16 px-6 lg:px-8 lg:py-24">
@@ -62,7 +77,7 @@ export default function Example() {
           </p>
         </div>
         <div className="mt-12">
-          <form action="#" method="POST" className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+          <form ref={form} onSubmit={sendEmail} className="grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
             <div>
               <label htmlFor="first-name" className="block text-sm font-medium text-aqua">
                 First name
@@ -70,7 +85,7 @@ export default function Example() {
               <div className="mt-1">
                 <input
                   type="text"
-                  name="first-name"
+                  name="first_name"
                   id="first-name"
                   autoComplete="given-name"
                   className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
@@ -84,7 +99,7 @@ export default function Example() {
               <div className="mt-1">
                 <input
                   type="text"
-                  name="last-name"
+                  name="last_name"
                   id="last-name"
                   autoComplete="family-name"
                   className="block w-full rounded-md border-gray-300 py-3 px-4 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
