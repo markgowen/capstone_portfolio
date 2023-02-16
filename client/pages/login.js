@@ -21,7 +21,7 @@ export default function Login() {
             body: JSON.stringify(form),
         }).then(res => {
             if (res.ok) {
-                res.json().then((user) => setUser(user)).then(router.push('/dashboard'))
+                res.json().then((user) => setUser(user)).then(router.push('/dashboard#employers'))
             } else {
                 res.json().then((error) => setErrors(error.errors))
             }

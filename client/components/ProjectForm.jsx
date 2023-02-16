@@ -62,6 +62,7 @@ export default function ProjectForm() {
                         website: '',
                         github: '',
                     });
+                    setShow(true)
                 })
         } else {
             fetch('/api/projects', {
@@ -219,15 +220,14 @@ export default function ProjectForm() {
                     leaveFrom="opacity-100"
                     leaveTo="opacity-0"
                 >
-                    <div className="pointer-events-auto w-full max-w-sm overflow-hidden rounded-none bg-white shadow-lg ring-1 ring-black ring-opacity-5">
+                    <div className="pointer-events-auto mt-6 w-full max-w-sm overflow-hidden rounded-none bg-steel shadow-lg ring-1 ring-black ring-opacity-5">
                         <div className="p-4">
                             <div className="flex items-start">
                                 <div className="flex-shrink-0">
-                                    <CheckCircleIcon className="h-6 w-6 text-green-400" aria-hidden="true" />
+                                    <CheckCircleIcon className="h-6 w-6 text-lime" aria-hidden="true" />
                                 </div>
                                 <div className="ml-3 w-0 flex-1 pt-0.5">
-                                    <p className="text-sm font-medium text-gray-900">Successfully saved!</p>
-                                    <p className="mt-1 text-sm text-gray-500">Anyone with a link can now view this file.</p>
+                                    <p className="text-sm font-medium text-lime">Successfully saved!</p>
                                 </div>
                                 <div className="ml-4 flex flex-shrink-0">
                                     <button

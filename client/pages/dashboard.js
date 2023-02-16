@@ -2,6 +2,7 @@
 import { Fragment, useState, useEffect, useContext } from 'react'
 import { useRouter } from 'next/router'
 import { Dialog, Transition } from '@headlessui/react'
+import { CheckCircleIcon } from '@heroicons/react/24/outline'
 import UserContext from '../contexts/userContext'
 import EmployerForm from '../components/EmployerForm'
 import ProjectForm from '../components/ProjectForm'
@@ -20,6 +21,7 @@ function classNames(...classes) {
 
 export default function Dashboard() {
     const [sidebarOpen, setSidebarOpen] = useState(false)
+    const [show, setShow] = useState(true)
     const [_user, setUser] = useContext(UserContext)
     const [navigation, setNavigation] = useState([
         { name: 'Employers', href: '#employers', icon: UsersIcon, current: false, component: <EmployerForm /> },
