@@ -1,3 +1,4 @@
+/* eslint-disable react/jsx-no-comment-textnodes */
 /* eslint-disable @next/next/no-img-element */
 import { CameraIcon } from '@heroicons/react/20/solid'
 import Image from 'next/image'
@@ -11,7 +12,7 @@ export default function Example() {
                 <div className="absolute top-0 bottom-0 left-3/4 hidden w-screen lg:block" />
                 <div className="mx-auto max-w-prose text-base lg:grid lg:max-w-none lg:grid-cols-2 lg:gap-8">
                     <div>
-                        <h3 className="mt-2 text-3xl font-bold leading-8 tracking-tight text-salmon sm:text-4xl">About Me</h3>
+                        <h3 className="mt-2 text-3xl font-bold leading-8 tracking-tight text-silver sm:text-4xl"><em className='text-salmon mr-2'>//</em> About Me</h3>
                     </div>
                 </div>
                 <div className="mt-8 lg:grid lg:grid-cols-2 lg:gap-8">
