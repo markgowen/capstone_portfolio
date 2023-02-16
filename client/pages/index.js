@@ -6,6 +6,7 @@ import Employers from '@/components/Employers'
 import Projects from '@/components/Projects'
 import Footer from '@/components/Footer'
 import Link from 'next/link'
+import ContactMe from '@/components/ContactMe'
 
 
 export default function Home() {
@@ -56,6 +57,7 @@ export default function Home() {
         <About />
         <Employers />
         <Projects />
+        <ContactMe />
         <Footer />
       </main>
     </div>
