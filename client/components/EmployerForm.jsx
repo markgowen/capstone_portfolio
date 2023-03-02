@@ -33,7 +33,6 @@ export default function EmployerForm() {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log('fired')
         fetch('/api/employers', {
             method: 'POST',
             headers: {
