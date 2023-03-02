@@ -1,6 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+
 }
 
 module.exports = {
@@ -12,8 +13,10 @@ module.exports = {
       }
     ]
   },
+
   // distDir: 'build',
   images: {
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
