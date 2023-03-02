@@ -12,7 +12,7 @@ module.exports = {
       }
     ]
   },
-  distDir: 'build',
+  // distDir: 'build',
   images: {
     remotePatterns: [
       {
