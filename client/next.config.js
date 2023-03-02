@@ -5,14 +5,14 @@ const nextConfig = {
 }
 
 module.exports = {
-  async rewrites() {
-    return [
-      {
-        source: '/api/:path*',
-        destination: 'http://localhost:3000/:path*'
-      }
-    ]
-  },
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/api/:path*',
+  //       destination: 'http://localhost:3000/:path*'
+  //     }
+  //   ]
+  // },
 
   // distDir: 'build',
   images: {

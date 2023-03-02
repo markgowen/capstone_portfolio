@@ -1,4 +1,4 @@
-class EmployersController < ApplicationController
+class Api::EmployersController < ApplicationController
   before_action :set_employer, only: [:show, :update, :destroy]
   skip_before_action :authorize, only: [:index, :show]
 
