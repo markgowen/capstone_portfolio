@@ -35598,3 +35598,745 @@ Processing by EmployersController#index as */*
 Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.4ms | Allocations: 4200)
 
 
+Started GET "/employers" for ::1 at 2023-02-16 13:33:28 -0800
+Processing by EmployersController#index as */*
+Started GET "/projects" for ::1 at 2023-02-16 13:33:28 -0800
+Processing by ProjectsController#index as */*
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mProject Load (1.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.55ms)
+Completed 200 OK in 23ms (Views: 23.1ms | ActiveRecord: 6.3ms | Allocations: 11754)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.78ms)
+Completed 200 OK in 24ms (Views: 7.0ms | ActiveRecord: 9.6ms | Allocations: 14413)
+
+
+Started POST "/login" for ::1 at 2023-02-16 14:17:25 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"admin", "password"=>"[FILTERED]", "session"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 201 Created in 304ms (Views: 0.4ms | ActiveRecord: 15.4ms | Allocations: 3752)
+
+
+Started POST "/projects" for ::1 at 2023-02-16 14:18:09 -0800
+Processing by ProjectsController#create as */*
+  Parameters: {"name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>"https://github.com/markgowen/capstone_portfolio", "project"=>{"name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>"https://github.com/markgowen/capstone_portfolio"}}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:14:in `create'
+[31mUnpermitted parameter: :project. Context: { controller: ProjectsController, action: create, request: #<ActionDispatch::Request:0x0000000116aaae58>, params: {"name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>"https://github.com/markgowen/capstone_portfolio", "controller"=>"projects", "action"=>"create", "project"=>{"name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>"https://github.com/markgowen/capstone_portfolio"}} }[0m
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mProject Create (1.8ms)[0m  [1m[32mINSERT INTO "projects" ("user_id", "name", "desc", "frameworks", "website", "created_at", "updated_at", "github") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["user_id", 6], ["name", "Project 2"], ["desc", "This is a test project"], ["frameworks", "React etc"], ["website", "https://github.com/markgowen/capstone_portfolio"], ["created_at", "2023-02-16 22:18:09.470070"], ["updated_at", "2023-02-16 22:18:09.470070"], ["github", "https://github.com/markgowen/capstone_portfolio"]]
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:15:in `create'
+[active_model_serializers] Rendered ProjectSerializer with ActiveModelSerializers::Adapter::Attributes (1.37ms)
+Completed 201 Created in 18ms (Views: 2.0ms | ActiveRecord: 5.0ms | Allocations: 3471)
+
+
+Started GET "/projects" for ::1 at 2023-02-16 14:18:12 -0800
+Started GET "/employers" for ::1 at 2023-02-16 14:18:12 -0800
+Processing by ProjectsController#index as */*
+Processing by EmployersController#index as */*
+  [1m[36mProject Load (1.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.03ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 1.4ms | Allocations: 7741)
+
+
+  [1m[36mEmployer Load (2.1ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.07ms)
+Completed 200 OK in 28ms (Views: 14.1ms | ActiveRecord: 13.8ms | Allocations: 13585)
+
+
+Started GET "/projects/12" for ::1 at 2023-02-16 14:18:18 -0800
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:32:in `set_project'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:10:in `show'
+[active_model_serializers] Rendered ProjectSerializer with ActiveModelSerializers::Adapter::Attributes (1.42ms)
+Completed 200 OK in 11ms (Views: 1.5ms | ActiveRecord: 0.7ms | Allocations: 1691)
+
+
+Started PATCH "/projects/12" for ::1 at 2023-02-16 14:18:24 -0800
+Processing by ProjectsController#update as */*
+  Parameters: {"id"=>"12", "name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>"", "user"=>{"id"=>6}, "project"=>{"id"=>"12", "name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>""}}
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+  [1m[36mProject Load (6.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:32:in `set_project'
+[31mUnpermitted parameters: :id, :user, :project. Context: { controller: ProjectsController, action: update, request: #<ActionDispatch::Request:0x00000001147cbe50>, params: {"id"=>"12", "name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>"", "user"=>{"id"=>6}, "controller"=>"projects", "action"=>"update", "project"=>{"id"=>"12", "name"=>"Project 2", "desc"=>"This is a test project", "frameworks"=>"React etc", "website"=>"https://github.com/markgowen/capstone_portfolio", "github"=>""}} }[0m
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:20:in `update'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:20:in `update'
+  [1m[36mProject Update (0.4ms)[0m  [1m[33mUPDATE "projects" SET "updated_at" = $1, "github" = $2 WHERE "projects"."id" = $3[0m  [["updated_at", "2023-02-16 22:18:24.056938"], ["github", ""], ["id", 12]]
+  ↳ app/controllers/projects_controller.rb:20:in `update'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:20:in `update'
+[active_model_serializers] Rendered ProjectSerializer with ActiveModelSerializers::Adapter::Attributes (0.44ms)
+Completed 202 Accepted in 19ms (Views: 0.8ms | ActiveRecord: 10.1ms | Allocations: 3922)
+
+
+Started GET "/employers" for ::1 at 2023-02-16 14:18:25 -0800
+Started GET "/projects" for ::1 at 2023-02-16 14:18:25 -0800
+Processing by EmployersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.77ms)
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+Completed 200 OK in 12ms (Views: 10.2ms | ActiveRecord: 1.5ms | Allocations: 8348)
+
+
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.08ms)
+Completed 200 OK in 13ms (Views: 10.8ms | ActiveRecord: 2.0ms | Allocations: 10610)
+
+
+Started DELETE "/projects/12" for ::1 at 2023-02-16 14:18:30 -0800
+Processing by ProjectsController#destroy as */*
+  Parameters: {"id"=>"12"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+  [1m[36mProject Load (0.1ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:32:in `set_project'
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/projects_controller.rb:25:in `destroy'
+  [1m[36mProject Destroy (0.2ms)[0m  [1m[31mDELETE FROM "projects" WHERE "projects"."id" = $1[0m  [["id", 12]]
+  ↳ app/controllers/projects_controller.rb:25:in `destroy'
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/projects_controller.rb:25:in `destroy'
+Completed 204 No Content in 4ms (ActiveRecord: 1.2ms | Allocations: 2387)
+
+
+Started GET "/me" for ::1 at 2023-02-16 14:18:37 -0800
+Started GET "/employers" for ::1 at 2023-02-16 14:18:37 -0800
+Started GET "/projects" for ::1 at 2023-02-16 14:18:37 -0800
+Processing by UsersController#show as */*
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 200 OK in 2ms (Views: 0.5ms | ActiveRecord: 0.5ms | Allocations: 929)
+
+
+Processing by EmployersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mEmployer Load (6.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mProject Load (4.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.92ms)
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 13ms (Views: 5.2ms | ActiveRecord: 7.6ms | Allocations: 7397)
+
+
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.77ms)
+Completed 200 OK in 14ms (Views: 6.8ms | ActiveRecord: 5.1ms | Allocations: 9499)
+
+
+Started DELETE "/logout" for ::1 at 2023-02-16 14:18:44 -0800
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+Completed 204 No Content in 19ms (ActiveRecord: 0.6ms | Allocations: 1048)
+
+
+Started GET "/employers" for ::1 at 2023-02-16 14:18:44 -0800
+Started GET "/projects" for ::1 at 2023-02-16 14:18:44 -0800
+Processing by EmployersController#index as */*
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+Processing by ProjectsController#index as */*
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.09ms)
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+Completed 200 OK in 6ms (Views: 5.1ms | ActiveRecord: 0.8ms | Allocations: 4731)
+
+
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.0ms)
+Completed 200 OK in 10ms (Views: 8.5ms | ActiveRecord: 0.8ms | Allocations: 8442)
+
+
+Started GET "/employers" for ::1 at 2023-02-16 14:34:54 -0800
+Started GET "/projects" for ::1 at 2023-02-16 14:34:54 -0800
+Processing by EmployersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mEmployer Load (1.0ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mProject Load (2.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (11.18ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (10.94ms)
+Completed 200 OK in 42ms (Views: 41.6ms | ActiveRecord: 21.2ms | Allocations: 15368)
+
+
+Completed 200 OK in 41ms (Views: 11.3ms | ActiveRecord: 22.4ms | Allocations: 14190)
+
+
+Started GET "/me" for ::1 at 2023-02-16 15:14:42 -0800
+Started GET "/projects" for ::1 at 2023-02-16 15:14:42 -0800
+Started GET "/employers" for ::1 at 2023-02-16 15:14:42 -0800
+Processing by ProjectsController#index as */*
+Processing by UsersController#show as */*
+Processing by EmployersController#index as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+  [1m[36mEmployer Load (0.7ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+Filter chain halted as :authorize rendered or redirected
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+Completed 401 Unauthorized in 15ms (Views: 0.5ms | ActiveRecord: 8.3ms | Allocations: 9451)
+
+
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.18ms)
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+Completed 200 OK in 19ms (Views: 18.5ms | ActiveRecord: 6.3ms | Allocations: 13771)
+
+
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.71ms)
+Completed 200 OK in 25ms (Views: 7.8ms | ActiveRecord: 10.9ms | Allocations: 20076)
+
+
+Started POST "/login" for ::1 at 2023-02-16 15:18:16 -0800
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"admin", "password"=>"[FILTERED]", "session"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.1ms)
+Completed 201 Created in 276ms (Views: 0.3ms | ActiveRecord: 0.6ms | Allocations: 854)
+
+
+Started GET "/employers" for ::1 at 2023-02-16 15:18:21 -0800
+Started GET "/projects" for ::1 at 2023-02-16 15:18:21 -0800
+Processing by EmployersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mEmployer Load (0.6ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mProject Load (1.3ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.55ms)
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.64ms)
+Completed 200 OK in 8ms (Views: 6.2ms | ActiveRecord: 1.7ms | Allocations: 6441)
+
+
+Completed 200 OK in 10ms (Views: 8.4ms | ActiveRecord: 1.5ms | Allocations: 9277)
+
+
+Started GET "/employers" for ::1 at 2023-02-16 15:18:25 -0800
+Started GET "/projects" for ::1 at 2023-02-16 15:18:25 -0800
+Processing by EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+Processing by ProjectsController#index as */*
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.52ms)
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 5588)
+
+
+[active_model_serializers]   [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.02ms)
+Completed 200 OK in 10ms (Views: 6.8ms | ActiveRecord: 1.6ms | Allocations: 8601)
+
+
+Started GET "/employers" for ::1 at 2023-02-16 15:18:29 -0800
+Started GET "/projects" for ::1 at 2023-02-16 15:18:29 -0800
+Processing by EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.2ms)
+Processing by ProjectsController#index as */*
+Completed 200 OK in 7ms (Views: 6.6ms | ActiveRecord: 0.7ms | Allocations: 4547)
+
+
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.07ms)
+Completed 200 OK in 7ms (Views: 6.0ms | ActiveRecord: 0.6ms | Allocations: 5411)
+
+
+Started GET "/employers" for ::1 at 2023-02-16 15:19:28 -0800
+Started GET "/projects" for ::1 at 2023-02-16 15:19:28 -0800
+Processing by EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+Processing by ProjectsController#index as */*
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mProject Load (1.0ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.91ms)
+Completed 200 OK in 8ms (Views: 7.0ms | ActiveRecord: 0.7ms | Allocations: 5581)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.38ms)
+Completed 200 OK in 10ms (Views: 7.8ms | ActiveRecord: 1.5ms | Allocations: 8604)
+
+
+Started GET "/me" for ::1 at 2023-02-17 10:29:57 -0800
+Started GET "/employers" for ::1 at 2023-02-17 10:29:57 -0800
+Started GET "/projects" for ::1 at 2023-02-17 10:29:57 -0800
+Processing by UsersController#show as */*
+Processing by EmployersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mProject Load (4.2ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.09ms)
+  [1m[36mEmployer Load (2.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+Completed 200 OK in 21ms (Views: 0.4ms | ActiveRecord: 13.2ms | Allocations: 11117)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.65ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (6.31ms)
+Completed 200 OK in 27ms (Views: 7.9ms | ActiveRecord: 12.1ms | Allocations: 17126)
+
+
+Completed 200 OK in 27ms (Views: 27.3ms | ActiveRecord: 15.7ms | Allocations: 18447)
+
+
+Started DELETE "/logout" for ::1 at 2023-02-17 10:30:32 -0800
+Processing by SessionsController#destroy as */*
+Started GET "/employers" for ::1 at 2023-02-17 10:30:32 -0800
+Started GET "/projects" for ::1 at 2023-02-17 10:30:32 -0800
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+Completed 204 No Content in 10ms (ActiveRecord: 0.8ms | Allocations: 1735)
+
+
+Processing by EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+Processing by ProjectsController#index as */*
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  [1m[36mProject Load (0.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.76ms)
+Completed 200 OK in 8ms (Views: 6.6ms | ActiveRecord: 0.9ms | Allocations: 5651)
+
+
+[active_model_serializers]   [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.37ms)
+Completed 200 OK in 13ms (Views: 7.2ms | ActiveRecord: 5.1ms | Allocations: 8634)
+
+
+Started GET "/projects" for ::1 at 2023-02-17 10:30:39 -0800
+Started GET "/employers" for ::1 at 2023-02-17 10:30:39 -0800
+Processing by ProjectsController#index as */*
+Processing by EmployersController#index as */*
+  [1m[36mProject Load (0.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.8ms)
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (8.32ms)
+Completed 200 OK in 8ms (Views: 6.7ms | ActiveRecord: 1.7ms | Allocations: 8355)
+
+
+Completed 200 OK in 11ms (Views: 8.5ms | ActiveRecord: 1.6ms | Allocations: 9710)
+
+
+Started GET "/projects" for ::1 at 2023-02-27 21:23:58 -0600
+Started GET "/me" for ::1 at 2023-02-27 21:23:58 -0600
+Started GET "/employers" for ::1 at 2023-02-27 21:23:58 -0600
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by ProjectsController#index as */*
+Processing by EmployersController#index as */*
+Processing by UsersController#show as */*
+  [1m[36mProject Load (3.8ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.04ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 401 Unauthorized in 59ms (Views: 1.4ms | ActiveRecord: 36.6ms | Allocations: 53467)
+
+
+  [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (27.14ms)
+Completed 200 OK in 92ms (Views: 53.6ms | ActiveRecord: 19.4ms | Allocations: 97708)
+
+
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.67ms)
+Completed 200 OK in 94ms (Views: 49.0ms | ActiveRecord: 27.6ms | Allocations: 100911)
+
+
+Started GET "/me" for ::1 at 2023-02-27 21:24:16 -0600
+Started GET "/employers" for ::1 at 2023-02-27 21:24:16 -0600
+Started GET "/projects" for ::1 at 2023-02-27 21:24:16 -0600
+Processing by UsersController#show as */*
+Processing by EmployersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mEmployer Load (0.9ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" IS NULL LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mProject Load (1.6ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with Hash (0.03ms)
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (5.45ms)
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.11ms)
+Filter chain halted as :authorize rendered or redirected
+Completed 200 OK in 11ms (Views: 9.1ms | ActiveRecord: 1.9ms | Allocations: 10407)
+
+
+Completed 401 Unauthorized in 13ms (Views: 0.2ms | ActiveRecord: 0.7ms | Allocations: 11069)
+
+
+Completed 200 OK in 10ms (Views: 6.3ms | ActiveRecord: 2.4ms | Allocations: 9988)
+
+
+Started POST "/login" for ::1 at 2023-02-27 21:24:40 -0600
+Processing by SessionsController#create as */*
+  Parameters: {"username"=>"admin", "password"=>"[FILTERED]", "session"=>{"username"=>"admin", "password"=>"[FILTERED]"}}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."username" = $1 LIMIT $2[0m  [["username", "admin"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:5:in `create'
+[active_model_serializers] Rendered UserSerializer with ActiveModelSerializers::Adapter::Attributes (0.12ms)
+Completed 201 Created in 267ms (Views: 0.4ms | ActiveRecord: 0.4ms | Allocations: 1018)
+
+
+Started GET "/projects" for ::1 at 2023-02-27 21:24:45 -0600
+Started GET "/employers" for ::1 at 2023-02-27 21:24:45 -0600
+Processing by ProjectsController#index as */*
+Processing by EmployersController#index as */*
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+  [1m[36mEmployer Load (0.4ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.9ms)
+Completed 200 OK in 7ms (Views: 6.1ms | ActiveRecord: 0.8ms | Allocations: 7750)
+
+
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (7.43ms)
+Completed 200 OK in 9ms (Views: 8.0ms | ActiveRecord: 0.8ms | Allocations: 9877)
+
+
+Started GET "/projects/8" for ::1 at 2023-02-27 21:24:48 -0600
+Processing by ProjectsController#show as */*
+  Parameters: {"id"=>"8"}
+  [1m[36mProject Load (0.4ms)[0m  [1m[34mSELECT "projects".* FROM "projects" WHERE "projects"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/projects_controller.rb:32:in `set_project'
+[active_model_serializers]   [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:10:in `show'
+[active_model_serializers] Rendered ProjectSerializer with ActiveModelSerializers::Adapter::Attributes (1.68ms)
+Completed 200 OK in 4ms (Views: 1.2ms | ActiveRecord: 1.1ms | Allocations: 1795)
+
+
+Started DELETE "/logout" for ::1 at 2023-02-27 21:24:58 -0600
+Started GET "/employers" for ::1 at 2023-02-27 21:24:58 -0600
+Started GET "/projects" for ::1 at 2023-02-27 21:24:58 -0600
+Processing by SessionsController#destroy as */*
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:10:in `authorize'
+Completed 204 No Content in 2ms (ActiveRecord: 0.3ms | Allocations: 1064)
+
+
+Processing by EmployersController#index as */*
+Processing by ProjectsController#index as */*
+  [1m[36mEmployer Load (0.8ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+  [1m[36mProject Load (1.9ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.5ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 1.0ms | Allocations: 5170)
+
+
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.05ms)
+Completed 200 OK in 10ms (Views: 7.2ms | ActiveRecord: 2.1ms | Allocations: 9499)
+
+
+Started GET "/projects" for ::1 at 2023-02-27 21:25:02 -0600
+Started GET "/employers" for ::1 at 2023-02-27 21:25:02 -0600
+Processing by ProjectsController#index as */*
+  [1m[36mProject Load (0.5ms)[0m  [1m[34mSELECT "projects".* FROM "projects" ORDER BY "projects"."created_at" ASC[0m
+  ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/projects_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (4.75ms)
+Completed 200 OK in 7ms (Views: 5.7ms | ActiveRecord: 0.8ms | Allocations: 5266)
+
+
+Processing by EmployersController#index as */*
+  [1m[36mEmployer Load (0.3ms)[0m  [1m[34mSELECT "employers".* FROM "employers"[0m
+  ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/employers_controller.rb:6:in `index'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (3.72ms)
+Completed 200 OK in 5ms (Views: 4.6ms | ActiveRecord: 0.5ms | Allocations: 4200)
+
+
